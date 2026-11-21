@@ -1,0 +1,38 @@
+{
+	"name": "audiobus-output-voice-workshop",
+	"version": "0.1.0",
+	"description": "Voice Workshop's physically based voice as a playable audiobus output",
+	"type": "module",
+	"main": "index.ts",
+	"types": "index.ts",
+	"exports": {
+		".": "./index.ts",
+		"./output": "./output-voice-workshop.ts",
+		"./settings": "./settings.ts",
+		"./voice-workshop.worklet.js": "./voice-workshop.worklet.js"
+	},
+	"sideEffects": false,
+	"scripts": {
+		"build": "node scripts/build-worklet.mjs",
+		"type-check": "tsc --noEmit"
+	},
+	"files": [
+		"*.ts",
+		"*.js",
+		"assets",
+		"LICENSE-voice-workshop",
+		"NOTICE-voice-workshop"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/designerzen/audiobus-output-voice-workshop.git"
+	},
+	"voiceWorkshop": {
+		"repository": "https://github.com/MithrilMan/voice-workshop.git",
+		"commit": "390ea35e98a183beb6478f894ca40e7290be92bc"
+	},
+	"devDependencies": {
+		"esbuild": "^0.27.3",
+		"typescript": "~5.9.3"
+	}
+}

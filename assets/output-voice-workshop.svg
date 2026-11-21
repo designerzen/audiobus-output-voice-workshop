@@ -1,0 +1,7 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+  <!-- head in profile, with the vocal tract as an open tube from the larynx to the lips -->
+  <path d="M22 56V44c-6-3-10-10-10-18C12 14 21 7 32 7s19 8 19 18l5 9-5 2v6c0 3-2 5-5 5h-5v9" stroke-width="2.5"/>
+  <path d="M27 52V38c0-4 2-7 6-8h10c2 0 3 1 4 2l2 3" stroke-width="2" opacity="0.7"/>
+  <!-- sound leaving the lips -->
+  <path d="M56 40c2 2 2 5 0 7M59 37c4 4 4 10 0 13" stroke-width="2" opacity="0.6"/>
+</svg>
