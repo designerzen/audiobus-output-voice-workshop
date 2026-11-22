@@ -33,7 +33,7 @@ document.body.append(await voice.createGui())
 
 ## Options
 
-Every option is also a control (`configure()`, or `getUiDescriptor()` and `setControlValue()` for a control surface).
+The musical settings below are controls (`configure()`, or `getUiDescriptor()` and `setControlValue()` for a control surface). Runtime `audioContext`, `destination` and `mixer` options are separate and are not serialized musical settings. The supplied context must be enabled from a user action; `mixer` takes routing precedence over `destination`.
 
 | Option | Default | Meaning |
 | --- | --- | --- |
@@ -53,6 +53,8 @@ Every option is also a control (`configure()`, or `getUiDescriptor()` and `setCo
 | `volume` | `0` | dB |
 
 ## Building the worklet
+
+[settings.ts](settings.ts) is the authoritative list of defaults, ranges and choices; [the output](output-voice-workshop.ts) defines runtime options and lifecycle. Release notes and call `destroy()` on removal; the host owns its AudioContext. Harmoneasy already registers the `voice-workshop` output. [package.json](package.json) declares the version, export subpaths and build/type-check commands.
 
 `voice-workshop.worklet.js` is built from `worklet/` and Voice Workshop's source at the commit pinned in `package.json` (`voiceWorkshop.commit`):
 
